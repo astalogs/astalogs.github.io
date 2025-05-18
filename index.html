@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASTAlogs</title>
+    
+        <style>
+    	p { font-family: arial; color: white;}
+       h1 { font-family: courier new; color: white;
+	     font-size: 36px;
+            margin-bottom: 20px; 
+        
+	  }
+        label {font-family: arial; color: white;}
+
+  #PasswordInput {
+        width: 300px;     
+        height: 40px;  
+        font-size: 18px;  
+        display: block;   
+        
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+
+
+	  
+    </style>
+    
+</head>
+<body style="background-color: black;">
+    <h1>ASTAlogs</h1>
+
+
+	<p><input type="text" id="PasswordInput" placeholder=" "></p>
+    <button onclick="checkPassword()">Procurar</button>
+    
+    <script>
+    	function checkPassword() {
+        	const input = document.getElementById("PasswordInput").value;
+		switch(input) {
+                case "zefiro":
+                    window.location.href = "https://sspx-x.github.io/queijo";
+                    break;
+                case "Y":
+                    window.location.href = "pageY.html";
+                    break;
+                default:
+                    alert("Nada encontrado no banco de dados");
+		}
+	}
+    
+    </script>
+    
+<p><img scr="void.jpg" alt="void" width="1920" height="1080"></p>
+
+
+
+
+	
+    
+</body>
+</html>
