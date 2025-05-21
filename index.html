@@ -48,21 +48,25 @@
         }, { once: true }); // Executa apenas uma vez
 
 
+function removerAcentos(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
+function checkPassword() {
+    let input = document.getElementById("PasswordInput").value;
+    input = removerAcentos(input).toLowerCase();
 
-    	function checkPassword() {
-        	const input = document.getElementById("PasswordInput").value;
-		switch(input) {
-                case "queijo":
-                    window.location.href = "zefiro.html";
-                    break;
-                case "Y":
-                    window.location.href = "pageY.html";
-                    break;
-                default:
-                    alert("Nada encontrado no banco de dados");
-		}
-	}
+    switch(input) {
+        case "zefiro":
+            window.location.href = "zefiro.html";
+            break;
+        case "y":
+            window.location.href = "pageY.html";
+            break;
+        default:
+            alert("Nada encontrado no banco de dados");
+    }
+}
     
     </script>
     
