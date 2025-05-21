@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ASTAlogs</title>
+    <title>sdfgdsfgsdfg</title>
     
         <style>
     	p { font-family: arial; color: white;}
@@ -17,16 +17,7 @@
         height: 40px;  
         font-size: 18px;  
         display: block;   
-        
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 8px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
+  }
 
 
 
@@ -34,19 +25,45 @@
     </style>
     
 </head>
-<body style="background-color: black;">
-    <h1>ASTAlogs</h1>
+<body style="background-image:url(void.png)">
+    <h1>dfgdfsgdfsg</h1>
+
+
+
+
+
+<audio id="bgm" loop>
+    <source src="suspense.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+
 
 
 	<p><input type="text" id="PasswordInput" placeholder=" "></p>
     <button onclick="checkPassword()">Procurar</button>
     
     <script>
+
+        
+        const bgm=document.getElementById('bgm')
+
+        // Tocar música ao clicar em qualquer lugar da página
+        window.addEventListener('click', function() {
+            bgm.play()
+        }, { once: true }); // Executa apenas uma vez
+
+
+
+
     	function checkPassword() {
         	const input = document.getElementById("PasswordInput").value;
 		switch(input) {
-                case "zefiro":
-                    window.location.href = "https://sspx-x.github.io/queijo";
+                case "queijo":
+                    window.location.href = "queijo.html";
                     break;
                 case "Y":
                     window.location.href = "pageY.html";
@@ -58,12 +75,12 @@
     
     </script>
     
-<p><img scr="void.jpg" alt="void" width="1920" height="1080"></p>
+
 
 
 
 
 	
-    
+
 </body>
 </html>
