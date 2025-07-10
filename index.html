@@ -34,39 +34,16 @@
 </audio>
 
 
-	<p><input type="text" id="PasswordInput" placeholder=" "></p>
-    <button onclick="checkPassword()">Procurar</button>
-    
+
     <script>
 
         
         const bgm=document.getElementById('bgm')
 
-        // Tocar música ao clicar em qualquer lugar da página
         window.addEventListener('click', function() {
             bgm.play()
-        }, { once: true }); // Executa apenas uma vez
+        }, { once: true }); 
 
-
-function removerAcentos(texto) {
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
-function checkPassword() {
-    let input = document.getElementById("PasswordInput").value;
-    input = removerAcentos(input).toLowerCase();
-
-    switch(input) {
-        case "zefiro":
-            window.location.href = "zefiro.html";
-            break;
-        case "y":
-            window.location.href = "pageY.html";
-            break;
-        default:
-            alert("Nada encontrado no banco de dados");
-    }
-}
     
     </script>
     
