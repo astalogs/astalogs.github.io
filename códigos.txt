@@ -1,3 +1,19 @@
+[login]
+palavra 8, primeira letra.
+palavra 9, sétima letra.
+palavra 14, primeira letra.
+palavra 16, sexta letra.
+palavra 20, primeira letra.
+palavra 22, segunda letra.
+palavra 24, quarta letra.
+palavra 25, quarta letra.
+palavra 30, terceira letra.
+palavra 32, quinta letra.
+palavra 40, primeira letra.
+palavra 49, primeira letra.
+palavra 55, última letra.
+palavra 63, primeira letra.
+
 [senha]
 palavra 13, sexta letra.
 palavra 16, quinta letra.
