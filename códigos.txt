@@ -1,0 +1,17 @@
+[senha]
+palavra 13, sexta letra.
+palavra 16, quinta letra.
+palavra 22, oitava letra.
+palavra 27, segunda letra.
+palavra 34, primeira e última letra.
+palavra 36, oitava letra
+palavra 37, sexta letra.
+palavra 43, primeira letra.
+palavra 46, primeira letra.
+palavra 50, quinta letra.
+palavra 51, terceira letra.
+"palavra" 57 inteira.
+palavra 59, última letra.
+palavra 70, última letra
+palavra 73, primeira letra.
+palavra 77, quarta letra.
