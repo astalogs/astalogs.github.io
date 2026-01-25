@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ASTAlogs</title>
-    
-        <style>
-    	p { font-family: arial; color: white;}
-       h1 { font-family: courier new; color: white;
-	     font-size: 36px;
-            margin-bottom: 20px; 
-        
-	  }
-        label {font-family: arial; color: white;}
-
-  }
-
-
-
-	  
-    </style>
-    
+  <title>Simple Login</title>
 </head>
-<body style="background-image:url(void.png)">
-    <h1>ASTAlogs</h1>
+<body>
 
-<audio id="bgm" loop>
-    <source src="suspense.mp3" type="audio/mpeg">
+  <h2>Login</h2>
 
-</audio>
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
 
+  <p id="message"></p>
 
+  <script>
+    function login() {
+      const correctUser = "admin";
+      const correctPass = "1234";
 
-    <script>
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
 
-        
-        const bgm=document.getElementById('bgm')
-
-        window.addEventListener('click', function() {
-            bgm.play()
-        }, { once: true }); 
-
-    
-    </script>
-    
-
-
-
-
-
-	
+      if (user === correctUser && pass === correctPass) {
+        // Redirect to another page
+        window.location.href = "success.html";
+      } else {
+        document.getElementById("message").textContent = "Wrong login or password!";
+      }
+    }
+  </script>
 
 </body>
 </html>
