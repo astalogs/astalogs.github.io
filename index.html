@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ASTAlogs</title>
-    
-        <style>
-    	p { font-family: Courier New;
-        color: green;
-          }
-        
-       h2 { font-family: courier new;
-       	color: green;
-       		}
-       a { color: green;
-        
-       }
-    </style>
+  <title>Login</title>
 </head>
-<body style="background-color: black;">
+<body>
 
-  <h2>A.S.T.A.</h2>
+<h2>Login</h2>
 
-  <input type="text" id="username" placeholder="Username"><br><br>
-  <input type="password" id="password" placeholder="Password"><br><br>
-  <button onclick="login()">Login</button>
+<input id="user" placeholder="Username">
+<br><br>
+<input id="pass" type="password" placeholder="Password">
+<br><br>
+<button onclick="login()">Enter</button>
 
-  <p id="message"></p>
+<p id="msg"></p>
 
-  <script>
-    function login() {
-      const correctUser = "admin";
-      const correctPass = "1234";
+<script>
+async function hash(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
 
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+async function login() {
+  const user = document.getElementById("user").value;
+  const pass = document.getElementById("pass").value;
 
-      if (user === correctUser && pass === correctPass) {
-        // Redirect to another page
-        window.location.href = "success.html";
-      } else {
-        document.getElementById("message").textContent = "Wrong login or password!";
-      }
-    }
-  </script>
+  // Change these ↓↓↓
+  const correctUser = "admin";
+  const correctPassHash = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"; 
+  // ↑ this hash = "password"
+
+  const enteredHash = await hash(pass);
+
+  if (user === correctUser && enteredHash === correctPassHash) {
+    window.location.href = "secret.html";
+  } else {
+    document.getElementById("msg").innerText = "Access denied.";
+  }
+}
+</script>
 
 </body>
 </html>
