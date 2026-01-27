@@ -19,42 +19,9 @@
 
 <h2>A.S.T.A.</h2>
 
-<input id="user" placeholder="Username">
-<br><br>
-<input id="pass" type="password" placeholder="Password">
-<br><br>
-<button onclick="login()">Enter</button>
 
 <p id="msg"></p>
 
-<script>
-async function hash(text) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(text);
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-  return Array.from(new Uint8Array(hashBuffer))
-    .map(b => b.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-async function login() {
-  const user = document.getElementById("user").value;
-  const pass = document.getElementById("pass").value;
-
-  // Change these ↓↓↓
-  const correctUser = "admin";
-  const correctPassHash = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"; 
-  // ↑ this hash = "password"
-
-  const enteredHash = await hash(pass);
-
-  if (user === correctUser && enteredHash === correctPassHash) {
-    window.location.href = "secret.html";
-  } else {
-    document.getElementById("msg").innerText = "Access denied.";
-  }
-}
-</script>
 
 </body>
 </html>
